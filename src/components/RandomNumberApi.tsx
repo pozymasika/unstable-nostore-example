@@ -1,12 +1,11 @@
 async function getRandomNumber() {
-  // sleep 3 sec
   await new Promise((resolve) =>
-    setTimeout(resolve, 3000)
+    setTimeout(resolve, 1000)
   );
   const response = await fetch(
     "https://www.randomnumberapi.com/api/v1.0/random?min=0&max=100&count=1",
     {
-      cache: "no-cache",
+      cache: "force-cache",
     }
   );
 
